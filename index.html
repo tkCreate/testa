@@ -5,78 +5,510 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Mega Library for manga lovers">
+  <meta name="keywords" content="acg, manga, novel, reader, library">
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" integrity="sha256-RdH19s+RN0bEXdaXsajztxnALYs/Z43H/Cdm1U4ar24=" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="https://rawcdn.githack.com/tkCreate/testa/06ae0779c5f206ed9acd857360793dbddc461e56/css/style.css" />
 
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Bootstrap Theme</title>
+
+  <title>MangaCloud</title>
+
 </head>
 
 <body id="home">
-  <!-- PHOTO GALLERY -->
-  <section id="gallery" class="py-5">
+
+  <button class="btn btn-primary" id="topUp">
+    <i class='fas fa-arrow-up'></i>
+  </button>
+
+  <!--NAVBAR-->
+  <nav id='main-nav' class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
 
-      <div class="mt-3"></div>
+      <a href="index.html" class="navbar-brand">
+        <strong class="text-primary"><i class="fas fa-cloud"></i>Manga</strong><span class="text-light font-weight-bold">Cloud</span>
+      </a>
 
-      <div class="row mb-4">
-        <div class="col-md-4">
-          <a href="https://source.unsplash.com/random/560x560" data-toggle="lightbox" data-height="560" data-width="560" style='width:100%;'>
-            <img src="https://source.unsplash.com/random/560x560" alt="" class="img-fluid">
-          </a>
+      <div class="d-flex">
+        <button class="btn btn-success btn-sm d-none d-sm-block mr-lg-3 mr-md-1" data-toggle="modal" data-target="#login">Login
+        </button>
+
+        <div class="btn-group d-sm-none">
+          <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#login">Login</button>
+          <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#sign">Register</button>
         </div>
 
-        <div class="col-md-4">
-          <a href="https://source.unsplash.com/random/561x561" data-toggle="lightbox" data-height="561" data-width="561">
-            <img src="https://source.unsplash.com/random/561x561" alt="" class="img-fluid">
-          </a>
+        <button class="navbar-toggler ml-3" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active mr-lg-3 mr-md-1 text-uppercase dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">首页</a>
+            <div class="dropdown-menu">
+              <a href="#home" class="dropdown-item text-capitalize">item 1</a>
+              <a href="#home-heading" class="dropdown-item text-capitalize">item 2</a>
+              <a href="#gallery" class="dropdown-item text-capitalize">item 3</a>
+            </div>
+          </li>
+
+          <li class="nav-item mr-lg-3 mr-md-1 text-uppercase">
+            <a href="about.html" class="nav-link">关于</a>
+          </li>
+          <li class="nav-item mr-lg-3 mr-md-1 text-uppercase">
+            <a href="services.html" class="nav-link">会员</a>
+          </li>
+          <li class="nav-item mr-lg-3 mr-md-1 text-uppercase">
+            <a href="blog.html" class="nav-link">博文</a>
+          </li>
+          <li class="nav-item mr-lg-3 mr-md-1 text-uppercase">
+            <a href="contact.html" class="nav-link">联系</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- SHOWCASE SLIDER -->
+  <section id="showcase" class="bg-dark">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+
+        <div class="carousel-item active ">
+          <video src="video/item1.mp4" muted autoplay loop></video>
+          <div class="dark-overlay">
+            <div class="carousel-caption">
+              <div class="container d-sm-none text-center" style="margin-bottom: 135px">
+                <h1 class="h3">最新漫画情报</h1>
+              </div>
+              <div class="container d-none d-md-block text-right mb-5">
+                <h1 class="display-4">最新漫画情报</h1>
+                <p class="lead p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aperiam vel ullam
+                  deleniti
+                  reiciendis ratione
+                  quod aliquid inventore vero perspiciatis.</p>
+                <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#sign">Sign Up Now</button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-4">
-          <a href="https://source.unsplash.com/random/562x562" data-toggle="lightbox" data-height="562" data-width="562">
-            <img src="https://source.unsplash.com/random/562x562" alt="" class="img-fluid">
-          </a>
+        <div class="carousel-item ">
+          <video src="video/item2.mp4" muted autoplay loop></video>
+          <div class="dark-overlay">
+            <div class="carousel-caption">
+              <div class="container d-sm-none text-center" style="margin-bottom: 135px">
+                <h1 class="h3">全新阅览体验</h1>
+              </div>
+              <div class="container d-none d-md-block text-right mb-5">
+                <h1 class="display-4">全新阅览体验</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aperiam vel ullam
+                  deleniti
+                  reiciendis ratione
+                  quod aliquid inventore vero perspiciatis.</p>
+                <a href="services.html" class="btn btn-primary btn-lg">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <video src="video/item3.mp4" muted autoplay loop></video>
+          <div class="dark-overlay">
+            <div class="carousel-caption">
+              <div class="container d-sm-none text-center" style="margin-bottom: 135px">
+                <h1 class="h3">正版漫画授权</h1>
+              </div>
+              <div class="container d-none d-md-block text-right mb-5">
+                <h1 class="display-4">正版漫画授权</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aperiam vel ullam
+                  deleniti
+                  reiciendis ratione
+                  quod aliquid inventore vero perspiciatis.</p>
+                <a href="services.html" class="btn btn-success btn-lg">Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="row mb-4">
-        <div class="col-md-4">
-          <a href="https://source.unsplash.com/random/563x563" data-toggle="lightbox" data-height="563" data-width="563">
-            <img src="https://source.unsplash.com/random/563x563" alt="" class="img-fluid">
-          </a>
+      <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+
+      <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+    </div>
+  </section>
+
+  <!--MODAL SIGN UP-->
+  <div class="modal" id="sign">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Register</h5>
+          <button class="close" data-dismiss="modal">&times;</button>
         </div>
 
-        <div class="col-md-4">
-          <a href="https://source.unsplash.com/random/564x564" data-toggle="lightbox" data-height="564" data-width="564">
-            <img src="https://source.unsplash.com/random/564x564" alt="" class="img-fluid">
-          </a>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" placeholder="enter your user name" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>E-mail</label>
+              <input type="email" placeholder="enter your e-mail" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" placeholder="enter password" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Confirm Password</label>
+              <input type="password" placeholder="enter confirm password" class="form-control">
+            </div>
+
+          </form>
         </div>
 
-        <div class="col-md-4">
-          <a href="https://source.unsplash.com/random/565x565" data-toggle="lightbox" data-height="565" data-width="565">
-            <img src="https://source.unsplash.com/random/565x565" alt="" class="img-fluid">
-          </a>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-dismiss="modal">Submit</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--MODAL LOGIN-->
+  <div class="modal" id="login">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" placeholder="enter your username" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" placeholder="enter your password" class="form-control">
+            </div>
+
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-dismiss="modal">Login</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--HOME ICON SECTION  -->
+  <section id="home-icons" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fas fa-cog fa-3x mb-2"></i>
+          <h3>阅览引擎</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, veniam.</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fas fa-cloud fa-3x mb-2"></i>
+          <h3>海量漫画</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, veniam.</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fas fa-cart-plus fa-3x mb-2"></i>
+          <h3>鼓励原创</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, veniam.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- HOME HEADING SECTION -->
+  <section id="home-heading" class="p-5">
+    <div class="dark-overlay">
+      <div class="row">
+        <div class="col">
+          <div class="container pt-5">
+            <div class="mt-3"></div>
+            <h2 class="h1">Are You Ready To Get Started?</h2>
+            <p class="d-none d-md-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est eaque magni sit
+              dolores. Nisi, dolor nam modi perspiciatis
+              consequatur soluta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section id="info" class="py-3">
+    <div class="container ">
+      <div class="row align-items-center no-gutters">
+        <div class="col-md-6 text-center text-md-left mt-3 mt-sm-0">
+          <h3>海外同步漫画</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eveniet blanditiis incidunt iusto
+            corrupti illum
+            cum laudantium ex sequi amet.</p>
+          <a href="about.html" class="btn btn-outline-danger btn-lg">Learn More</a>
+        </div>
+        <div class="col-md-6">
+          <img src="img/laptop.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO PLAY -->
+  <section id="video-play">
+    <div class="dark-overlay">
+      <div class="row">
+        <div class="col">
+          <div class="container p-5">
+            <a href="#" data-toggle="modal" data-target="#videoModal">
+              <i class="fas fa-play fa-3x"></i>
+            </a>
+            <h3 class="h1">在线阅览体验</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO MODAL -->
+  <div class="modal fade" id="videoModal" style="margin-top:8rem">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-capitalize">阅览体验</h5>
+          <button class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe src="//player.bilibili.com/player.html?aid=838268383&bvid=BV1Bg4y1B7pG&cid=194217635&page=1" frameborder="0" height="350" width="100%" allowfullscreen style="border-radius:5px"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO GALLERY -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+
+      <div class="mt-3"></div>
+      <h2 class="text-center h1">Manga Gallery</h2>
+      <p class="text-center">Check out the best manga cover</p>
+
+      <!--lightbox gallery-->
+      <div class="inner-gallery">
+        <div class="row mb-4">
+          <div class="col-md-4 ">
+
+            <div class="box">
+              <a href="img/gallery1.jpg">
+                <img src="img/gallery1.jpg" alt="" class="img-fluid">
+
+                <!--overlay-->
+                <div class="overlay1">
+                  <div class="text text-center text-white">
+                    <h3>Hello World</h3>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                  </div>
+                </div>
+
+              </a>
+            </div>
+
+          </div>
+
+          <div class="col-md-4">
+            <div class="box">
+              <a href="img/gallery2.jpg">
+                <img src="img/gallery2.jpg" alt="" class="img-fluid">
+
+                <!--overlay-->
+                <div class="overlay2">
+                  <div class="text text-center text-white">
+                    <h3>Hello World</h3>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                  </div>
+                </div>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="box">
+              <a href="img/gallery3.jpg">
+                <img src="img/gallery3.jpg" alt="" class="img-fluid">
+
+                <!--overlay-->
+                <div class="overlay3">
+                  <div class="text text-center text-white">
+                    <h3>Hello World</h3>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                  </div>
+                </div>
+
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="box">
+              <a href="img/gallery4.jpg">
+                <img src="img/gallery4.jpg" alt="" class="img-fluid">
+
+                <!--overlay-->
+                <div class="overlay4">
+                  <div class="text text-center text-white">
+                    <h3>Hello World</h3>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                  </div>
+                </div>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="box">
+              <a href="img/gallery5.jpg">
+                <img src="img/gallery5.jpg" alt="" class="img-fluid">
+
+                <!--overlay-->
+                <div class="overlay5">
+                  <div class="text text-center text-white">
+                    <h3>Hello World</h3>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                  </div>
+                </div>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="box">
+              <a href="img/gallery6.jpg">
+                <img src="img/gallery6.jpg" alt="" class="img-fluid">
+
+                <!--overlay-->
+                <div class="overlay1">
+                  <div class="text text-center text-white">
+                    <h3>Hello World</h3>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                  </div>
+                </div>
+
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter" class="text-center p-5 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 class="h1">速报订阅</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio asperiores consectetur, quae ducimus
+            voluptates
+            vero repellendus architecto maiores recusandae mollitia?</p>
+
+          <form class="form-inline justify-content-center">
+            <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Name">
+            <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Email">
+            <button class="btn btn-primary mb-2">Submit</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="text-center p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="lead">Copyright &copy;
+            <span id="year"></span> MangaCloud</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-  
-  <script src="https://rawcdn.githack.com/tkCreate/testa/06ae0779c5f206ed9acd857360793dbddc461e56/js/utility.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q=" crossorigin="anonymous"></script>
+
+    <script src="https://rawcdn.githack.com/tkCreate/testa/06ae0779c5f206ed9acd857360793dbddc461e56/js/utility.js"></script>
+
+  
+  <script src="js/utility.js"></script>
   <script>
+    // Carousel
+    $('.carousel').carousel({
+      interval: 4000,
+      pause: 'hover',
+      keyboard: true
+    });
+
     // Lightbox
-    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
-      event.preventDefault();
-      $(this).ekkoLightbox();
+    $(document).ready(function () {
+      $('.inner-gallery').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+          enabled: true
+        }
+      });
     });
 
   </script>

@@ -64,11 +64,5 @@ function scrollFunction() {
 }
 
 $('#topUp').click(function() {
-	// just smooth scroll
-	$('html').animate(
-		{
-			scrollTop: 0
-		},
-		900
-	);
+	document.documentElement.scrollTop = 0;
 });

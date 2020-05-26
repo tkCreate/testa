@@ -29,7 +29,7 @@
   </button>
 
   <!--NAVBAR-->
-  <nav id='main-nav' class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+  <nav id='main-nav' class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
 
       <a href="index.html" class="navbar-brand">
@@ -37,12 +37,12 @@
       </a>
 
       <div class="d-flex">
-        <button class="btn btn-success btn-sm d-none d-sm-block mr-lg-3 mr-md-1" data-toggle="modal" data-target="#login">Login
+        <button class="btn btn-success btn-sm d-none d-sm-block mr-lg-3 mr-md-1" data-toggle="modal" data-target="#login">登录
         </button>
 
         <div class="btn-group d-sm-none">
-          <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#login">Login</button>
-          <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#sign">Register</button>
+          <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#login">登录</button>
+          <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#sign">注册</button>
         </div>
 
         <button class="navbar-toggler ml-3" data-toggle="collapse" data-target="#navbarCollapse">
@@ -55,9 +55,9 @@
           <li class="nav-item active mr-lg-3 mr-md-1 text-uppercase dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">首页</a>
             <div class="dropdown-menu">
-              <a href="#home" class="dropdown-item text-capitalize">item 1</a>
-              <a href="#home-heading" class="dropdown-item text-capitalize">item 2</a>
-              <a href="#gallery" class="dropdown-item text-capitalize">item 3</a>
+              <a href="#home" class="dropdown-item text-capitalize">注册登录</a>
+              <a href="#home-heading" class="dropdown-item text-capitalize">阅览体验</a>
+              <a href="#gallery" class="dropdown-item text-capitalize">封面展览</a>
             </div>
           </li>
 
@@ -102,7 +102,7 @@
                   deleniti
                   reiciendis ratione
                   quod aliquid inventore vero perspiciatis.</p>
-                <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#sign">Sign Up Now</button>
+                <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#sign">快速注册</button>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@
                   deleniti
                   reiciendis ratione
                   quod aliquid inventore vero perspiciatis.</p>
-                <a href="services.html" class="btn btn-primary btn-lg">Learn More</a>
+                <a href="services.html" class="btn btn-primary btn-lg">了解更多</a>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@
                   deleniti
                   reiciendis ratione
                   quod aliquid inventore vero perspiciatis.</p>
-                <a href="services.html" class="btn btn-success btn-lg">Learn More</a>
+                <a href="services.html" class="btn btn-success btn-lg">了解更多</a>
               </div>
             </div>
           </div>
@@ -164,37 +164,37 @@
       <div class="modal-content">
 
         <div class="modal-header">
-          <h5 class="modal-title">Register</h5>
+          <h5 class="modal-title">注册信息填写</h5>
           <button class="close" data-dismiss="modal">&times;</button>
         </div>
 
         <div class="modal-body">
           <form>
             <div class="form-group">
-              <label>Username</label>
-              <input type="text" placeholder="enter your user name" class="form-control">
+              <label>用户名</label>
+              <input type="text" placeholder="输入用户名" class="form-control">
             </div>
 
             <div class="form-group">
-              <label>E-mail</label>
-              <input type="email" placeholder="enter your e-mail" class="form-control">
+              <label>邮箱</label>
+              <input type="email" placeholder="输入邮箱" class="form-control">
             </div>
 
             <div class="form-group">
-              <label>Password</label>
-              <input type="password" placeholder="enter password" class="form-control">
+              <label>密码</label>
+              <input type="password" placeholder="输入注册密码" class="form-control">
             </div>
 
             <div class="form-group">
-              <label>Confirm Password</label>
-              <input type="password" placeholder="enter confirm password" class="form-control">
+              <label>确认密码</label>
+              <input type="password" placeholder="输入确认密码" class="form-control">
             </div>
 
           </form>
         </div>
 
         <div class="modal-footer">
-          <button class="btn btn-primary" data-dismiss="modal">Submit</button>
+          <button class="btn btn-primary" data-dismiss="modal">提交</button>
         </div>
 
       </div>
@@ -208,7 +208,7 @@
       <div class="modal-content">
 
         <div class="modal-header">
-          <h5 class="modal-title">Login</h5>
+          <h5 class="modal-title">登录</h5>
           <button class="close" data-dismiss="modal">&times;</button>
         </div>
 
@@ -216,20 +216,20 @@
           <form>
 
             <div class="form-group">
-              <label>Username</label>
-              <input type="text" placeholder="enter your username" class="form-control">
+              <label>用户名</label>
+              <input type="text" placeholder="输入用户名" class="form-control">
             </div>
 
             <div class="form-group">
-              <label>Password</label>
-              <input type="password" placeholder="enter your password" class="form-control">
+              <label>密码</label>
+              <input type="password" placeholder="输入登录密码" class="form-control">
             </div>
 
           </form>
         </div>
 
         <div class="modal-footer">
-          <button class="btn btn-primary" data-dismiss="modal">Login</button>
+          <button class="btn btn-primary" data-dismiss="modal">登录</button>
         </div>
 
       </div>
@@ -286,7 +286,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eveniet blanditiis incidunt iusto
             corrupti illum
             cum laudantium ex sequi amet.</p>
-          <a href="about.html" class="btn btn-outline-danger btn-lg">Learn More</a>
+          <a href="about.html" class="btn btn-outline-danger btn-lg">了解更多</a>
         </div>
         <div class="col-md-6">
           <img src="img/laptop.png" alt="" class="img-fluid">
@@ -333,8 +333,8 @@
     <div class="container">
 
       <div class="mt-3"></div>
-      <h2 class="text-center h1">Manga Gallery</h2>
-      <p class="text-center">Check out the best manga cover</p>
+      <h2 class="text-center h1">封面展览</h2>
+      <p class="text-center">最佳漫画封面一览</p>
 
       <!--lightbox gallery-->
       <div class="inner-gallery">
@@ -460,9 +460,9 @@
             vero repellendus architecto maiores recusandae mollitia?</p>
 
           <form class="form-inline justify-content-center">
-            <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Name">
-            <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Email">
-            <button class="btn btn-primary mb-2">Submit</button>
+            <input type="text" class="form-control mb-2 mr-2" placeholder="输入用户名">
+            <input type="text" class="form-control mb-2 mr-2" placeholder="输入邮箱">
+            <button class="btn btn-primary mb-2">提交</button>
           </form>
 
         </div>
@@ -488,33 +488,30 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q=" crossorigin="anonymous"></script>
 
-  <<<<<<< HEAD <script src="https://rawcdn.githack.com/tkCreate/testa/06ae0779c5f206ed9acd857360793dbddc461e56/js/utility.js">
-    </script>
-    =======
-    <script src="https://rawcdn.githack.com/tkCreate/testa/06ae0779c5f206ed9acd857360793dbddc461e56/js/utility.js"></script>
-    >>>>>>> 9195fd4d8fc0e5162f13bed918f32f80dcaf696c
+  <script src="https://rawcdn.githack.com/tkCreate/testa/06ae0779c5f206ed9acd857360793dbddc461e56/js/utility.js">
+  </script>
 
-    <script src="js/utility.js"></script>
-    <script>
-      // Carousel
-      $('.carousel').carousel({
-        interval: 4000,
-        pause: 'hover',
-        keyboard: true
+  <script src="js/utility.js"></script>
+  <script>
+    // Carousel
+    $('.carousel').carousel({
+      interval: 4000,
+      pause: 'hover',
+      keyboard: true
+    });
+
+    // Lightbox
+    $(document).ready(function () {
+      $('.inner-gallery').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+          enabled: true
+        }
       });
+    });
 
-      // Lightbox
-      $(document).ready(function () {
-        $('.inner-gallery').magnificPopup({
-          type: 'image',
-          delegate: 'a',
-          gallery: {
-            enabled: true
-          }
-        });
-      });
-
-    </script>
+  </script>
 </body>
 
 </html>

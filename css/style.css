@@ -45,7 +45,7 @@ body {
 #home-heading {
     position: relative;
     height: 200px;
-    background: url('../img/anime.jpg') no-repeat fixed center center/cover;
+    background: url("../img/anime.jpg") no-repeat fixed center center/cover;
     text-align: center;
     color: #fff;
 }
@@ -63,7 +63,7 @@ body {
 #video-play {
     position: relative;
     height: 200px;
-    background: url('../img/studio.jpeg') no-repeat fixed center center/cover;
+    background: url("../img/studio.jpeg") no-repeat fixed center center/cover;
     text-align: center;
     color: #fff;
 }
@@ -178,7 +178,7 @@ body {
 #about-header {
     position: relative;
     height: 210px;
-    background: url('../img/image1.jpg') no-repeat center center/cover;
+    background: url("../img/image1.jpg") no-repeat center center/cover;
     color: #fff;
 }
 
@@ -192,14 +192,14 @@ body {
 #services-header {
     position: relative;
     height: 210px;
-    background: url('../img/services.jpg') no-repeat;
+    background: url("../img/services.jpg") no-repeat;
     background-position: 0% 30%;
     background-size: cover;
     color: #fff;
 }
 
 #reason {
-    background: url('../img/image3.jpg') no-repeat fixed center center/cover;
+    background: url("../img/image3.jpg") no-repeat fixed center center/cover;
 }
 
 #reason .dark-shadow {
@@ -244,12 +244,11 @@ body {
     background: #333;
 }
 
-
 /*BLOG*/
 #blog-header {
     position: relative;
     height: 210px;
-    background: url('../img/blog.jpeg') no-repeat;
+    background: url("../img/blog.jpeg") no-repeat;
     background-position: 0% 45%;
     background-size: cover;
     color: #fff;
@@ -264,12 +263,11 @@ body {
     transition: all 1.2s;
 }
 
-
 /*CONTACT*/
 #contact-header {
     position: relative;
     height: 210px;
-    background: url('../img/contact.jpeg') no-repeat;
+    background: url("../img/contact.jpeg") no-repeat;
     background-position: 0% 55%;
     background-size: cover;
     color: #fff;
@@ -293,11 +291,8 @@ body {
     color: #fff;
 }
 
-
 /*footer*/
 #main-footer {
     background: #000;
     color: #fff;
 }
-
-

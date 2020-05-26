@@ -9,7 +9,7 @@ body {
     z-index: 99;
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 50px;
     right: 30px;
 }
 
@@ -17,6 +17,13 @@ body {
     box-shadow: 0 2px 5px teal;
     opacity: 0.9;
 }
+
+@media (max-width: 740px) {
+    .navbar {
+        padding-top: 2rem;
+    }
+}
+
 
 .navbar .nav-item {
     font-size: 14px;

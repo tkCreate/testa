@@ -26,6 +26,313 @@
         href="https://raw.githack.com/tkCreate/testa/master/css/style.css">
 
   <title>MangaCloud</title>
+  
+  <style>
+    body {
+    overflow-x: hidden;
+}
+
+/*INDEX */
+
+/*toTop button*/
+#topUp {
+    z-index: 99;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
+.navbar {
+    box-shadow: 0 2px 5px teal;
+    opacity: 0.9;
+}
+
+.navbar .nav-item {
+    font-size: 14px;
+}
+
+.navbar .nav-item:hover {
+    background: rgba(238, 74, 74, 0.87);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.carousel-inner {
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#home-heading {
+    position: relative;
+    height: 200px;
+    background: url('../img/anime.jpg') no-repeat fixed center center/cover;
+    text-align: center;
+    color: #fff;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#video-play {
+    position: relative;
+    height: 200px;
+    background: url('../img/studio.jpeg') no-repeat fixed center center/cover;
+    text-align: center;
+    color: #fff;
+}
+
+#video-play a {
+    color: #fff;
+}
+
+/*gallery overlay*/
+.box {
+    position: relative;
+}
+
+.box .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*fade in*/
+.box .overlay1 {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    transition: all 0.5s;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.box:hover .overlay1 {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+/*fly up*/
+.box .overlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    transition: all 0.5s;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.box:hover .overlay2 {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+/*fly down*/
+.box .overlay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    transition: all 0.5s;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.box:hover .overlay3 {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+/*fly left*/
+.box .overlay4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    transition: all 0.5s;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.box:hover .overlay4 {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+/*fly right*/
+.box .overlay5 {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 0;
+    transition: all 0.5s;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.box:hover .overlay5 {
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+/*ABOUT*/
+#about-header {
+    position: relative;
+    height: 210px;
+    background: url('../img/image1.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+@media (min-width: 1200px) {
+    .about-img {
+        margin-top: -70px;
+    }
+}
+
+/*SERVICES*/
+#services-header {
+    position: relative;
+    height: 210px;
+    background: url('../img/services.jpg') no-repeat;
+    background-position: 0% 30%;
+    background-size: cover;
+    color: #fff;
+}
+
+#reason {
+    background: url('../img/image3.jpg') no-repeat fixed center center/cover;
+}
+
+#reason .dark-shadow {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#reason .card .card-header {
+    font-size: 1.1rem;
+    background: #ddd;
+}
+
+#reason .card .card-header .active {
+    color: rgb(41, 177, 239);
+}
+
+#reason .card .card-body {
+    padding: 2rem;
+}
+
+#reason .card .card-title {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+#faq .faq-title {
+    margin-bottom: 1.5rem;
+    border-bottom: #4c4b4b solid 1px;
+}
+
+#faq .card {
+    border: #444 solid;
+}
+
+#faq a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+#faq .card-body,
+#faq .card-header {
+    background: #333;
+}
+
+
+/*BLOG*/
+#blog-header {
+    position: relative;
+    height: 210px;
+    background: url('../img/blog.jpeg') no-repeat;
+    background-position: 0% 45%;
+    background-size: cover;
+    color: #fff;
+}
+
+#blog .card .inner-box {
+    overflow: hidden;
+}
+
+#blog .card .inner-box img:hover {
+    transform: scale(1.5);
+    transition: all 1.2s;
+}
+
+
+/*CONTACT*/
+#contact-header {
+    position: relative;
+    height: 210px;
+    background: url('../img/contact.jpeg') no-repeat;
+    background-position: 0% 55%;
+    background-size: cover;
+    color: #fff;
+}
+
+#staff .card {
+    box-shadow: 5px 5px 10px rgb(243, 59, 13);
+}
+
+#staff img {
+    margin-top: -50px;
+}
+
+#staff .card:hover {
+    background: rgba(243, 59, 13, 0.91);
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#staff .fab {
+    color: #fff;
+}
+
+
+/*footer*/
+#main-footer {
+    background: #000;
+    color: #fff;
+}
+
+
+
+  </style>
 
 </head>
 
@@ -512,6 +819,73 @@
 
   <script src="js/utility.js"></script>
   <script>
+    // Get the current year for the copyright
+$('#year').text(new Date().getFullYear());
+
+$('body').scrollspy({target: '#main-nav'});
+
+// Scrolling
+$('#main-nav a').on('click', function (e) {
+    if (this.hash !== '') {
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 900, function () {
+            window.location.hash = hash;
+        });
+
+    }
+});
+
+// SCROLL
+window.onscroll = function () {
+    // When the user scrolls down 100px from the top of the document, show the button
+    scrollFunction()
+    //hide navbar
+    hideNav()
+};
+
+//HIDE navbar
+var prevScrollpos = window.pageYOffset;
+
+function hideNav() {
+    var currentScrollpos = window.pageYOffset;
+    if (prevScrollpos > currentScrollpos) {  //up
+        $("#main-nav").css({
+            display: 'none',
+        })
+    } else {  //down
+        $("#main-nav").css({
+            display: 'block',
+        })
+    }
+
+    prevScrollpos = currentScrollpos;
+}
+
+//Scroll to TOP
+function scrollFunction() {
+    if (document.documentElement.scrollTop > 100) {
+        $("#topUp").css({
+            display: 'block',
+        })
+    } else {
+        $("#topUp").css({
+            display: 'none',
+        })
+    }
+}
+
+$('#topUp').click(function () {
+    // just smooth scroll
+    $('html').animate({
+        scrollTop: 0
+    }, 900);
+})
+    
       // Carousel
       $('.carousel').carousel({
           interval: 4000,

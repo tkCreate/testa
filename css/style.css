@@ -9,7 +9,7 @@ body {
     z-index: 99;
     display: none;
     position: fixed;
-    bottom: 50px;
+    bottom: 20px;
     right: 30px;
 }
 

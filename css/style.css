@@ -18,13 +18,6 @@ body {
     opacity: 0.9;
 }
 
-@media (max-width: 740px) {
-    .navbar {
-        padding-top: 2rem;
-    }
-}
-
-
 .navbar .nav-item {
     font-size: 14px;
 }

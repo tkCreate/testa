@@ -47,7 +47,7 @@ function hideNav() {
 
 //Scroll to TOP
 function scrollFunction() {
-    if (document.documentElement.scrollTop > 50) {
+    if (document.documentElement.scrollTop > 100) {
         $("#topUp").css({
             display: 'block',
         })

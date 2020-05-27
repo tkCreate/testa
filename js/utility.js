@@ -1,9 +1,7 @@
-// Get the current year for the copyright
 $('#year').text(new Date().getFullYear());
 
 $('body').scrollspy({ target: '#main-nav' });
 
-// Scrolling
 $('#main-nav a').on('click', function(e) {
 	if (this.hash !== '') {
 		e.preventDefault();
@@ -22,11 +20,8 @@ $('#main-nav a').on('click', function(e) {
 	}
 });
 
-// SCROLL
 window.onscroll = function() {
-	// When the user scrolls down 100px from the top of the document, show the button
 	scrollFunction();
-	//hide navbar
 	hideNav();
 };
 
